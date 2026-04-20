@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.titleInput {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  width: 100%;
+  outline: none;
+}
+
+.titleInput::placeholder {
+  color: var(--text-muted);
+  opacity: 0.3;
+}
+
+.list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.addButton {
+  flex-shrink: 0;
+  width: 110px;
+  height: 150px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.addButton span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .container {
+    overflow-x: visible;
+  }
+  
+  .list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .addButton, .slot {
+    width: 45%; /* Two cards per row on small mobile */
+    min-width: 100px;
+  }
+}

@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.positionSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(0,0,0,0.2);
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.positionSelector button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  transition: color 0.2s;
+}
+
+.positionSelector button:hover {
+  color: var(--accent-color);
+}
+
+.posLabel {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+.fretboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.nutRow {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.spacer {
+  width: 40px;
+}
+
+.nutCell {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.openDot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.mutedX {
+  color: #8b4513; /* Deep sienna instead of bright red */
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+}
+
+.fretRow {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fretNumber {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fretNumber:hover {
+  color: var(--accent-color);
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.barreActive {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.cellsContainer {
+  display: flex;
+  position: relative;
+}
+
+.barreLine {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 40px;
+  background: rgba(197, 160, 89, 0.25);
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fretCell {
+  width: 50px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fretCell:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stringLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.fretDot {
+  position: relative;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--bg-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Elegant Interval Palette - Muted Gold/Ivory/Wood tones */
+.interval_R { background: var(--accent-color); color: var(--bg-color); }
+.interval_b2 { background: #5c5c59; color: white; }
+.interval_2 { background: #7a7a76; color: white; }
+.interval_b3 { background: #8b7355; color: white; }
+.interval_3 { background: #a68b6a; color: white; }
+.interval_4 { background: #6c7a7d; color: white; }
+.interval_b5 { background: #4a5c5e; color: white; }
+.interval_5 { background: #e8e6e3; color: var(--bg-color); }
+.interval_s5 { background: #8b5a5a; color: white; }
+.interval_6 { background: #7d6c7d; color: white; }
+.interval_b7 { background: #4b3832; color: white; }
+.interval_7 { background: #5a5a8b; color: white; }
+
+@media (max-width: 600px) {
+  .container {
+    gap: 1rem;
+  }
+
+  .nutCell {
+    width: 40px;
+  }
+
+  .fretCell {
+    width: 40px;
+  }
+
+  .spacer {
+    width: 30px;
+  }
+
+  .fretNumber {
+    width: 30px;
+  }
+
+  .fretDot {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+}

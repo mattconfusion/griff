@@ -1,0 +1,46 @@
+.toolbar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  padding: 0.4rem 0.5rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.btn span {
+  display: inline;
+}
+
+.danger {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.danger:hover {
+  opacity: 1;
+  color: #8b4513;
+  border-bottom-color: #8b4513;
+}
+
+@media (max-width: 600px) {
+  .btn span {
+    display: none;
+  }
+}
