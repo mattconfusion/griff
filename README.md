@@ -1,16 +1,9 @@
-# React + Vite
+# Griff
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visit here. https://mattconfusion.github.io/griff/
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Griff** is a browser-based single-page application for guitarists to compose, analyse, and export sequences of chord shapes in any tuning. It combines a visual fretboard editor with a real-time music theory engine that names chords and annotates the harmonic function of each note.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Target user:** guitarists who work across alternate tunings (DADGAD, open G, drop D, etc.) and need a lightweight, shareable way to notate chord voicings without a full DAW or notation editor.
